@@ -15,5 +15,5 @@
 - `Pingdom_App` : Pingdom 앱 애플리케이션
 - `Pingdom_Web` : Pingodm 웹 애플리케이션
 - `Pingdom_Backend` : Pingdom 백엔드 애플리케이션
-- - `Pingdom_AI_Server` : Pingodm AI 서버 애플리케이션
+- `Pingdom_AI_Server` : Pingodm AI 서버 애플리케이션
 - `Pingdom_Proxy` : Pingdom 프록시 애플리케이션
