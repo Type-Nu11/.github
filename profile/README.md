@@ -6,7 +6,7 @@
 > 본 Organization은 Pingdom 서비스의 MCP Server, Server, App, Web, Network 레포지토리를 관리합니다.
 
 #### Client
-- TypeScript, React, React-Native, React-Query, SSI-Pinning, i1in-js, zustand
+- TypeScript, React, React-Native, TanStack Query, SSL-Pinning, i18n-js, zustand, axios, styled-component
 #### Server
 - Java 21, Spring Boot 3.3, Spring Security, JPA, PostgreSQL
   
