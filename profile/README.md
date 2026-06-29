@@ -4,16 +4,3 @@
 
 > **Pingdom**은 장소 기반 탐색, 기록, 추천 경험을 다루는 서비스를 개발하는 프로젝트입니다.  
 > 본 Organization은 Pingdom 서비스의 MCP Server, Server, App, Web, Network 레포지토리를 관리합니다.
-
-#### Client
-- TypeScript, React, React-Native, TanStack Query, SSL-Pinning, i18n-js, zustand, axios, styled-component
-#### Server
-- Java 21, Spring Boot 3.3, Spring Security, JPA, PostgreSQL
-  
-#### Repository
-
-- `Pingdom_App` : Pingdom 앱 애플리케이션
-- `Pingdom_Web` : Pingodm 웹 애플리케이션
-- `Pingdom_Backend` : Pingdom 백엔드 애플리케이션
-- `Pingdom_AI_Server` : Pingodm AI 서버 애플리케이션
-- `Pingdom_Proxy` : Pingdom 프록시 애플리케이션
