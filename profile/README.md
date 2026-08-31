@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/pingdom-logo.png" alt="Pingdom — 한국에서 갈 곳을 더 쉽게." width="720" />
+  <img src="assets/pingdom-logo.png" alt="Pingdom — 한국에서 갈 곳을 더 쉽게." width="100%" />
 </p>
 
 # Pingdom
@@ -64,7 +64,7 @@ Pingdom은 현재 **GA(General Availability)** 단계입니다.
 ## 시스템 아키텍처
 
 <p align="center">
-  <img src="assets/system-architecture.png" alt="Pingdom 시스템 아키텍처" width="1200" />
+  <img src="assets/system-architecture.png" alt="Pingdom 시스템 아키텍처" width="100%" />
 </p>
 
 Pingdom은 모바일·웹 클라이언트의 요청을 네트워크 계층에서 처리한 뒤, 핵심 서비스와
