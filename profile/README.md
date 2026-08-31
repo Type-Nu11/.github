@@ -92,15 +92,88 @@ AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다.
 
 ## 사용 기술
 
-| 구분 | 기술 | 활용 |
+### 모바일 애플리케이션
+
+| 구분 | 기술 | 적용 범위 |
 |---|---|---|
-| 모바일·웹 클라이언트 | React Native, React, TypeScript, Vite, Node.js, Styled Components, i18n-js | 모바일·웹 화면 구현과 다국어 처리 |
-| 네트워크 계층 | Nginx, OpenResty, Lua | 클라이언트 요청의 프록시 및 네트워크 처리 |
-| 핵심 서비스 | Java, Spring, Spring Boot, Spring JPA | API와 핵심 비즈니스 규칙 처리 |
-| 데이터베이스 | PostgreSQL | 서비스 데이터 저장과 조회 |
-| AI·MCP | Spring AI MCP, WebFlux, Tool API, OpenAI | AI 기반 기능과 구조화된 도구 연동 |
-| 형상 관리·배포 | Git, GitHub, GitHub Actions, Docker, AWS EC2 | 변경 관리, 자동화 및 실행 환경 운영 |
-| API 문서 | Swagger | API 명세 확인과 클라이언트·서버 연동 검증 |
+| 기반 기술 | React Native 0.83, React 19, Expo SDK 55, TypeScript 5.9 | iOS·Android 애플리케이션과 Expo 기반 개발 환경 |
+| 화면·스타일 | Styled Components 6, React Native SVG | 공통 UI 스타일과 벡터 이미지 표현 |
+| 화면 이동 | React Navigation 7 | 인증, 탐색, 기록과 사업자 기능의 화면 전환 |
+| 서버 상태 | TanStack Query 5, Axios 1.16 | API 요청, 캐시, 로딩·오류 상태와 데이터 동기화 |
+| 클라이언트 상태 | Zustand 5, Async Storage, React Native Keychain | 화면 상태, 로컬 데이터와 인증정보 저장 |
+| 위치·알림 | Expo Location, Expo Notifications, Firebase Messaging | 현재 위치 조회와 푸시 알림 처리 |
+| 다국어 | i18next, react-i18next | 사용자 화면의 다국어 리소스와 문구 관리 |
+| 검증 | Jest 29, Testing Library, TypeScript | 컴포넌트·회귀 테스트와 정적 타입 검증 |
+
+### 관리자·컨설팅 웹
+
+| 구분 | 기술 | 적용 범위 |
+|---|---|---|
+| 기반 기술 | React 19, TypeScript 6, Vite 8 | 관리자와 AI 컨설팅 웹 애플리케이션 구성 |
+| 라우팅 | React Router 7 | 관리자 기능과 컨설팅 화면의 경로 구성 |
+| 통신 | Axios | 백엔드 API 요청과 응답 처리 |
+| 스타일 | Styled Components 6 | 화면 단위 스타일과 재사용 UI 구성 |
+| 품질 관리 | ESLint 9, TypeScript ESLint | 코드 규칙과 타입 기반 정적 분석 |
+
+### 백엔드 API
+
+| 구분 | 기술 | 적용 범위 |
+|---|---|---|
+| 언어·프레임워크 | Java 21, Spring Boot 3.3, Spring MVC | REST API와 핵심 비즈니스 로직 실행 |
+| 인증·보안 | Spring Security, OAuth2 Client, JWT | 이메일·소셜 로그인, 인증과 역할 기반 접근 제어 |
+| 데이터 접근 | Spring Data JPA, Hibernate Spatial, JTS | 도메인 데이터와 공간 좌표 저장·조회 |
+| 배치·비동기 처리 | Spring Batch, Spring AOP | 배치 작업과 공통 후속 처리 구성 |
+| 운영 상태 | Spring Boot Actuator | 애플리케이션 상태와 운영 지표 확인 |
+| 데이터 검증 | Spring Validation | API 입력값과 요청 계약 검증 |
+| 파일·알림 연동 | AWS S3, Firebase Admin, Postmark | 파일 저장, 푸시 알림과 이메일 발송 |
+| PDF 생성 | OpenHTML to PDF | AI 입지 분석 결과의 PDF 보고서 생성 |
+
+### 데이터 및 공간 처리
+
+| 구분 | 기술 | 적용 범위 |
+|---|---|---|
+| 관계형 데이터베이스 | PostgreSQL 16 | 사용자, 장소, 콘텐츠, 예약과 결제 데이터 저장 |
+| 공간 데이터 | PostGIS, Hibernate Spatial, JTS | 좌표 기반 장소 조회와 공간 연산 |
+| 캐시·상태 저장 | Redis 7 | 단기 상태, 캐시와 후속 처리 지원 |
+| 스키마 관리 | Flyway | 데이터베이스 변경 이력과 순차 마이그레이션 관리 |
+
+### AI·MCP
+
+| 구분 | 기술 | 적용 범위 |
+|---|---|---|
+| MCP 서버 | Lua, Lapis, LuaJIT, Cqueues | 백엔드와 AI 모델 사이의 MCP 요청 처리 |
+| 데이터 접근 | Pgmoon, PostgreSQL, PostGIS | 위치·유동인구 데이터 조회와 공간 데이터 처리 |
+| 위치 처리 | Geohash | 좌표 인코딩과 위치 기반 데이터 가공 |
+| AI 연동 | MCP Protocol, Tool API, LLM API | 도구 호출, 분석 실행과 구조화된 결과 반환 |
+| 실행 환경 | OpenResty, Docker | MCP 서버 실행과 컨테이너 배포 |
+
+### 네트워크 및 트래픽 처리
+
+| 구분 | 기술 | 적용 범위 |
+|---|---|---|
+| API 게이트웨이 | Nginx, OpenResty, Lua, LuaJIT | 요청 라우팅, 인증 흐름과 Rate Limit 처리 |
+| 네트워크 정보 | GeoLite2 ASN·Country Database | 요청 IP의 ASN과 국가 정보 조회 |
+| 로드밸런서 | HAProxy 3.2 | Round Robin 분산, 헬스 체크와 경로별 타임아웃 처리 |
+| 운영 에이전트 | C++20, CMake 3.20 | HAProxy Runtime API 상태 조회와 제어 |
+| 접근 제어 | HAProxy Stick Table, ACL | 요청 속도 제한과 정적 IP 차단 |
+
+### API 계약 및 테스트
+
+| 구분 | 기술 | 적용 범위 |
+|---|---|---|
+| API 문서 | Springdoc OpenAPI, Swagger UI | 서비스별 REST API 명세 제공 |
+| 계약 검증 | OpenAPI Diff, openapi-typescript | 호환성 비교와 클라이언트 타입 생성 |
+| 백엔드 테스트 | JUnit 5, Spring Boot Test, Testcontainers, H2 | 단위·통합·PostgreSQL 기반 회귀 검증 |
+| 프론트엔드 테스트 | Jest, Testing Library, ESLint | UI 동작, 회귀 시나리오와 정적 분석 |
+
+### 빌드 및 배포
+
+| 구분 | 기술 | 적용 범위 |
+|---|---|---|
+| 빌드 도구 | Gradle, npm, Vite, CMake | 백엔드·프론트엔드·운영 에이전트 빌드 |
+| 자동화 | GitHub Actions | 검증, 이미지 빌드와 배포 작업 실행 |
+| 컨테이너 | Docker, Docker Compose | 서비스별 실행 환경과 로컬 의존성 구성 |
+| 실행 환경 | AWS EC2 | API, 네트워크와 AI 서비스 실행 |
 
 ---
 
