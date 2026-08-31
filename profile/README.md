@@ -6,13 +6,13 @@
 
 ---
 
-**한국에서 갈 곳을 더 쉽게.**
+**한국에서 갈 곳을 더 쉽게.**<br />
 장소를 발견하고, 방문 경험을 기록하며, 다음 선택을 이어 갑니다.
 
-**사용자와 사업자를 잇는 장소 경험.**
+**사용자와 사업자를 잇는 장소 경험.**<br />
 탐색·저장·콘텐츠·예약·혜택·운영 정보를 하나로 연결합니다.
 
-**신뢰할 수 있는 서비스 운영.**
+**신뢰할 수 있는 서비스 운영.**<br />
 정확한 정보와 일관된 운영 흐름으로 더 나은 방문 경험을 만듭니다.
 
 Pingdom은 장소 탐색, 사진 기반 기록, 개인화 추천, 사업자 운영, 예약·혜택·결제와
@@ -120,12 +120,12 @@ AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다.
 | 저장소 | 설명 |
 |---|---|
 | [pingdom-app](https://github.com/Type-Nu11/pingdom-app) | React Native 기반 사용자·사업자 모바일 애플리케이션 |
-| `pingdom-api` | Java·Spring Boot 기반 핵심 API와 비즈니스 로직 |
-| `pingdom-admin` | React 기반 관리자 웹 애플리케이션 |
-| `pingdom-consulting` | React 기반 AI 소상공인 컨설팅 웹 애플리케이션 |
-| `pingdom-infra` | OpenResty·Lua 기반 리버스 프록시 |
-| `pingdom-loadbalancer` | HAProxy·C++ 기반 로드밸런서 |
-| `pingdom-mcp` | Lapis·Lua 기반 AI·MCP 서버 |
+| [pingdom-api](https://github.com/Type-Nu11/pingdom-api) | Java·Spring Boot 기반 핵심 API와 비즈니스 로직 |
+| [pingdom-admin](https://github.com/Type-Nu11/pingdom-admin) | React 기반 관리자 웹 애플리케이션 |
+| [pingdom-consulting](https://github.com/Type-Nu11/pingdom-consulting) | React 기반 AI 소상공인 컨설팅 웹 애플리케이션 |
+| [pingdom-infra](https://github.com/Type-Nu11/pingdom-infra) | OpenResty·Lua 기반 리버스 프록시 |
+| [pingdom-loadbalancer](https://github.com/Type-Nu11/pingdom-loadbalancer) | HAProxy·C++ 기반 로드밸런서 |
+| [pingdom-mcp](https://github.com/Type-Nu11/pingdom-mcp) | Lapis·Lua 기반 AI·MCP 서버 |
 
 ---
 
