@@ -201,6 +201,20 @@ AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다.
 
 ---
 
+## 팀원 소개
+
+| 이름 | 역할 |
+|---|---|
+| [김우성 (azunox)](https://github.com/azunox) | PM / Server Lead / Web(Merchant) |
+| [김일강 (rmdkarhdwn)](https://github.com/rmdkarhdwn) | Client Lead / App |
+| [우성민 (wusm1230)](https://github.com/wusm1230) | Design Lead / App |
+| [김태우 (xodn09)](https://github.com/xodn09) | Client / Web(Admin) |
+| [조성혁 (shawnatak926)](https://github.com/shawnatak926) | Server |
+| [이용인 (yongin1212)](https://github.com/yongin1212) | Server / Infra |
+| [장준혁 (JJH090501)](https://github.com/JJH090501) | MCP / Network |
+
+---
+
 <div align="center">
 
 Maintained by **Type-Nu11**
