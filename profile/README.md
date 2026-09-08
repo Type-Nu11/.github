@@ -2,6 +2,8 @@
   <img src="assets/pingdom-logo.png" alt="Pingdom — 한국에서 갈 곳을 더 쉽게." width="100%" />
 </p>
 
+<p> <img src="https://komarev.com/ghpvc/?username=Type-Nu11&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" /> </p>
+
 # Pingdom
 
 **한국에서 갈 곳을 더 쉽게.**<br />
