@@ -4,7 +4,7 @@
 
 <p> <img src="https://komarev.com/ghpvc/?username=Type-Nu11&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" /> </p>
 
-# Pingdom
+# 핑덤(Pingdom)
 
 **한국에서 갈 곳을 더 쉽게.**<br />
 장소를 발견하고, 방문 경험을 기록하며, 다음 선택을 이어 갑니다.
