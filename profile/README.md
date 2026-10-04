@@ -197,6 +197,7 @@ AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다.
 | [pingdom-api](https://github.com/Type-Nu11/pingdom-api) | Java·Spring Boot 기반 핵심 API와 비즈니스 로직 |
 | [pingdom-admin](https://github.com/Type-Nu11/pingdom-admin) | React 기반 관리자 웹 애플리케이션 |
 | [pingdom-consulting](https://github.com/Type-Nu11/pingdom-consulting) | React 기반 AI 소상공인 컨설팅 웹 애플리케이션 |
+| [pingdom-landing](https://github.com/Type-Nu11/pingdom-landing) | HTML·CSS·JavaScript 기반 공식 서비스 소개 랜딩페이지 |
 | [pingdom-infra](https://github.com/Type-Nu11/pingdom-infra) | OpenResty·Lua 기반 리버스 프록시 |
 | [pingdom-loadbalancer](https://github.com/Type-Nu11/pingdom-loadbalancer) | HAProxy·C++ 기반 로드밸런서 |
 | [pingdom-mcp](https://github.com/Type-Nu11/pingdom-mcp) | Lapis·Lua 기반 AI·MCP 서버 |
