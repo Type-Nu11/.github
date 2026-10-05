@@ -208,7 +208,7 @@ AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다.
 
 | 이름 | 역할 |
 |---|---|
-| [김우성 (azunox)](https://github.com/azunox) | PM / Server Lead / Web(Merchant) |
+| [김우성 (azunox)](https://github.com/azunox) | PM / Server Lead |
 | [김일강 (rmdkarhdwn)](https://github.com/rmdkarhdwn) | Client Lead / App |
 | [우성민 (wusm1230)](https://github.com/wusm1230) | Design Lead / App |
 | [김태우 (xodn09)](https://github.com/xodn09) | Client / Web(Admin) |
