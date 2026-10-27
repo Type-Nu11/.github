@@ -2,7 +2,9 @@
   <img src="assets/pingdom-logo.png" alt="Pingdom — 한국에서 갈 곳을 더 쉽게." width="100%" />
 </p>
 
-## Overview
+<p> <img src="https://komarev.com/ghpvc/?username=Type-Nu11&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" /> </p>
+
+# 핑덤(Pingdom)
 
 **한국에서 갈 곳을 더 쉽게.**<br />
 장소를 발견하고, 방문 경험을 기록하며, 다음 선택을 이어 갑니다.
@@ -18,52 +20,21 @@ AI 기반 소상공인 컨설팅을 제공하는 서비스입니다.<br />
 모바일 애플리케이션, 관리자 웹, 컨설팅 웹, 백엔드 API, MCP 서버와 네트워크 인프라로
 구성됩니다.
 
-## Project Status
+---
+
+## 프로젝트 상태
 
 Pingdom은 현재 **GA(General Availability)** 단계입니다.
 
-| Item | Status |
+| 항목 | 상태 |
 |---|---|
-| Development | `Generally Available` |
-| Release | `GA` |
-| Stability | `Stable` |
+| 개발 단계 | `GA` |
+| 릴리스 상태 | `Generally Available` |
+| 안정성 | `Stable` |
 
-## Repository Role
+---
 
-| Item | Description |
-|---|---|
-| Type | `Organization Profile` |
-| Responsibility | Pingdom 조직 소개, 서비스 구성 및 팀 정보 관리 |
-| Primary Output | GitHub 조직 프로필과 소개 이미지 |
-| Target | Pingdom 사용자, 기여자 및 협업자 |
-
-### Team
-
-| 이름 | 역할 |
-|---|---|
-| [김우성 (azunox)](https://github.com/azunox) | PM / Server Lead |
-| [김일강 (rmdkarhdwn)](https://github.com/rmdkarhdwn) | Client Lead / App |
-| [우성민 (wusm1230)](https://github.com/wusm1230) | Design Lead / App |
-| [김태우 (xodn09)](https://github.com/xodn09) | Client / Web(Admin) |
-| [조성혁 (shawnatak926)](https://github.com/shawnatak926) | Server |
-| [이용인 (yongin1212)](https://github.com/yongin1212) | Server / Infra |
-| [장준혁 (JJH090501)](https://github.com/JJH090501) | MCP / Network |
-
-## Scope
-
-### Included
-
-- Pingdom 서비스 소개와 주요 기능 안내
-- 서비스 아키텍처, 기술 및 배포 구성 안내
-- 조직 저장소 목록과 팀원 소개
-- 조직 프로필 이미지 관리
-
-### Not Included
-
-- 개별 애플리케이션 구현과 실행 설정
-- 운영 인증정보와 실제 배포 환경 관리
-
-## Key Capabilities
+## 주요 기능
 
 | 기능 영역 | 제공 기능 |
 |---|---|
@@ -77,7 +48,9 @@ Pingdom은 현재 **GA(General Availability)** 단계입니다.
 | AI 컨설팅 | 장소와 운영 데이터를 활용한 소상공인 입지·운영 분석 제공 |
 | 알림 및 후속 처리 | 이메일·푸시 알림과 비동기 후속 작업 처리 |
 
-### Service Composition
+---
+
+## 서비스 구성
 
 | 영역 | 역할 |
 |---|---|
@@ -88,7 +61,36 @@ Pingdom은 현재 **GA(General Availability)** 단계입니다.
 | MCP 서버 | AI 모델과 도구 API를 연결하고 구조화된 분석 결과 반환 |
 | 네트워크 계층 | 외부 요청을 각 서비스로 전달하는 프록시와 로드밸런싱 처리 |
 
-## Technology and Tools
+---
+
+## 시스템 아키텍처
+
+<p align="center">
+  <img src="assets/system-architecture.png" alt="Pingdom 시스템 아키텍처" width="100%" />
+</p>
+
+Pingdom은 모바일·웹 클라이언트의 요청을 네트워크 계층에서 처리한 뒤, 핵심 서비스와
+AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다. 핵심 서비스는 데이터베이스와
+연동해 서비스 데이터를 관리하고, AI·MCP 서비스는 필요한 도구 호출을 통해 구조화된
+응답을 제공합니다. 애플리케이션은 GitHub Actions와 Docker를 이용해 AWS EC2 실행
+환경에 배포합니다.
+
+---
+
+## 서비스 요청 및 데이터 처리
+
+1. 모바일·웹 클라이언트의 요청은 Nginx와 OpenResty·Lua 기반 네트워크 계층을 거쳐
+   핵심 API 서비스로 전달됩니다.
+2. 핵심 API는 Spring Boot와 Spring JPA를 통해 비즈니스 규칙을 처리하고,
+   PostgreSQL에 서비스 데이터를 저장하거나 조회합니다.
+3. AI 기능이 필요한 요청은 핵심 서비스에서 MCP 서비스로 전달됩니다. MCP 서비스는
+   Tool API와 AI 모델을 사용해 처리한 뒤 구조화된 응답을 핵심 서비스에 반환합니다.
+4. API 명세는 Swagger로 관리해 클라이언트·서버·운영 도구 사이의 연동 기준을
+   일관되게 유지합니다.
+
+---
+
+## 사용 기술
 
 ### 모바일 애플리케이션
 
@@ -139,11 +141,11 @@ Pingdom은 현재 **GA(General Availability)** 단계입니다.
 
 | 구분 | 기술 | 적용 범위 |
 |---|---|---|
-| MCP 서버 | Lua 5.3, Lapis, Cqueues | 백엔드와 AI 모델 사이의 MCP 요청 처리 |
+| MCP 서버 | Lua, Lapis, LuaJIT, Cqueues | 백엔드와 AI 모델 사이의 MCP 요청 처리 |
 | 데이터 접근 | Pgmoon, PostgreSQL, PostGIS | 위치·유동인구 데이터 조회와 공간 데이터 처리 |
 | 위치 처리 | Geohash | 좌표 인코딩과 위치 기반 데이터 가공 |
 | AI 연동 | MCP Protocol, Tool API, LLM API | 도구 호출, 분석 실행과 구조화된 결과 반환 |
-| 실행 환경 | Docker, Docker Compose | MCP 서버 실행과 컨테이너 배포 |
+| 실행 환경 | OpenResty, Docker | MCP 서버 실행과 컨테이너 배포 |
 
 ### 네트워크 및 트래픽 처리
 
@@ -151,9 +153,9 @@ Pingdom은 현재 **GA(General Availability)** 단계입니다.
 |---|---|---|
 | API 게이트웨이 | Nginx, OpenResty, Lua, LuaJIT | 요청 라우팅, 인증 흐름과 Rate Limit 처리 |
 | 네트워크 정보 | GeoLite2 ASN·Country Database | 요청 IP의 ASN과 국가 정보 조회 |
-| 엣지 프록시 | Rust, Cargo | HTTPS 종료와 Web/App OpenResty 라우팅 |
-| 접근 제어 | Rust 메모리 기반 IP별 제한 | 프로세스 단위 요청 속도 제한과 임시 차단 |
-| 기존 구성 | HAProxy 3.2 | 저장소에 남아 있는 기존 프록시 설정 |
+| 로드밸런서 | HAProxy 3.2 | Round Robin 분산, 헬스 체크와 경로별 타임아웃 처리 |
+| 운영 에이전트 | C++20, CMake 3.20 | HAProxy Runtime API 상태 조회와 제어 |
+| 접근 제어 | HAProxy Stick Table, ACL | 요청 속도 제한과 정적 IP 차단 |
 
 ### API 계약 및 테스트
 
@@ -168,84 +170,14 @@ Pingdom은 현재 **GA(General Availability)** 단계입니다.
 
 | 구분 | 기술 | 적용 범위 |
 |---|---|---|
-| 빌드 도구 | Gradle, npm, Vite, Cargo | 백엔드·프론트엔드·엣지 프록시 빌드 |
+| 빌드 도구 | Gradle, npm, Vite, CMake | 백엔드·프론트엔드·운영 에이전트 빌드 |
 | 자동화 | GitHub Actions | 검증, 이미지 빌드와 배포 작업 실행 |
 | 컨테이너 | Docker, Docker Compose | 서비스별 실행 환경과 로컬 의존성 구성 |
 | 실행 환경 | AWS EC2 | API, 네트워크와 AI 서비스 실행 |
 
-## Getting Started
+---
 
-### Requirements
-
-- Git
-- Markdown과 이미지를 확인할 수 있는 편집기 또는 브라우저
-
-### Setup
-
-```bash
-git clone https://github.com/Type-Nu11/.github.git
-cd .github
-```
-
-### Usage
-
-`profile/README.md`와 `profile/assets/`를 수정하고 PR로 검토합니다.
-각 서비스의 실행 방법은 아래 Related Repositories의 README를 참고하세요.
-
-## Configuration
-
-`profile/README.md`가 조직 프로필에 표시됩니다. 프로필 이미지는 `profile/assets/`에서 관리하고,
-README에서는 `assets/파일명` 상대 경로로 참조합니다. 인증정보와 운영 비밀 값은 커밋하지 않습니다.
-
-## Verification
-
-문서 변경 시 다음 항목을 확인합니다.
-
-- Markdown 제목 단계, 표, 코드 블록과 구분선
-- `profile/README.md` 기준 상대 이미지 경로와 저장소 링크
-- 서비스 구성과 팀원 정보의 변경 근거
-
-```bash
-git diff --check
-```
-
-GitHub의 Markdown 미리보기에서 배너, 아키텍처 이미지와 표의 배치를 확인합니다.
-
-## Repository Structure
-
-```text
-.
-└── profile
-    ├── README.md                    # 조직 프로필
-    └── assets
-        ├── pingdom-logo.png         # 프로필 배너
-        └── system-architecture.png  # 서비스 아키텍처
-```
-
-### System Architecture
-
-<p align="center">
-  <img src="assets/system-architecture.png" alt="Pingdom 시스템 아키텍처" width="100%" />
-</p>
-
-Pingdom은 모바일·웹 클라이언트의 요청을 네트워크 계층에서 처리한 뒤, 핵심 서비스와
-AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다. 핵심 서비스는 데이터베이스와
-연동해 서비스 데이터를 관리하고, AI·MCP 서비스는 필요한 도구 호출을 통해 구조화된
-응답을 제공합니다. 애플리케이션은 GitHub Actions와 Docker를 이용해 AWS EC2 실행
-환경에 배포합니다.
-
-### Request and Data Flow
-
-1. 모바일·웹 클라이언트의 요청은 Nginx와 OpenResty·Lua 기반 네트워크 계층을 거쳐
-   핵심 API 서비스로 전달됩니다.
-2. 핵심 API는 Spring Boot와 Spring JPA를 통해 비즈니스 규칙을 처리하고,
-   PostgreSQL에 서비스 데이터를 저장하거나 조회합니다.
-3. AI 기능이 필요한 요청은 핵심 서비스에서 MCP 서비스로 전달됩니다. MCP 서비스는
-   Tool API와 AI 모델을 사용해 처리한 뒤 구조화된 응답을 핵심 서비스에 반환합니다.
-4. API 명세는 Swagger로 관리해 클라이언트·서버·운영 도구 사이의 연동 기준을
-   일관되게 유지합니다.
-
-### Deployment
+## 배포 구성
 
 | 구성요소 | 역할 |
 |---|---|
@@ -253,11 +185,13 @@ AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다.
 | Docker | 서비스 실행 환경을 컨테이너 이미지로 구성 |
 | AWS EC2 | 서버 애플리케이션과 네트워크 구성요소 실행 |
 | Nginx·OpenResty | 외부 요청 수신과 서비스 라우팅 |
-| Rust edge | HTTPS 종료와 Web/App Gateway 라우팅 |
+| HAProxy | 서비스 트래픽 분산 |
 
-## Related Repositories
+---
 
-| Repository | Relationship |
+## 저장소 구성
+
+| 저장소 | 설명 |
 |---|---|
 | [pingdom-app](https://github.com/Type-Nu11/pingdom-app) | React Native 기반 사용자·사업자 모바일 애플리케이션 |
 | [pingdom-api](https://github.com/Type-Nu11/pingdom-api) | Java·Spring Boot 기반 핵심 API와 비즈니스 로직 |
@@ -265,26 +199,27 @@ AI·MCP 서비스가 각자의 책임에 맞게 응답하도록 구성합니다.
 | [pingdom-consulting](https://github.com/Type-Nu11/pingdom-consulting) | React 기반 AI 소상공인 컨설팅 웹 애플리케이션 |
 | [pingdom-landing](https://github.com/Type-Nu11/pingdom-landing) | HTML·CSS·JavaScript 기반 공식 서비스 소개 랜딩페이지 |
 | [pingdom-infra](https://github.com/Type-Nu11/pingdom-infra) | OpenResty·Lua 기반 리버스 프록시 |
-| [pingdom-loadbalancer](https://github.com/Type-Nu11/pingdom-loadbalancer) | Rust 기반 HTTPS 엣지 프록시와 기존 HAProxy 구성 |
+| [pingdom-loadbalancer](https://github.com/Type-Nu11/pingdom-loadbalancer) | HAProxy·C++ 기반 로드밸런서 |
 | [pingdom-mcp](https://github.com/Type-Nu11/pingdom-mcp) | Lapis·Lua 기반 AI·MCP 서버 |
 
-## Documentation
+---
 
-각 서비스의 실행, 설정, API 및 운영 문서는 Related Repositories에 연결한 저장소의 README에서 확인합니다.
+## 팀원 소개
 
-## Release and Compatibility
-
-조직 소개와 팀 정보의 변경은 이 저장소의 Git 변경 이력으로 관리합니다.
-각 서비스의 Release와 호환성 정책은 해당 저장소의 안내를 기준으로 확인합니다.
-
-## License
-
-이 저장소에는 별도의 `LICENSE` 파일이 없습니다. 개별 프로젝트의 사용 및 배포 조건은 해당 저장소의 라이선스를 확인하세요.
+| 이름 | 역할 |
+|---|---|
+| [김우성 (azunox)](https://github.com/azunox) | PM / Server Lead |
+| [김일강 (rmdkarhdwn)](https://github.com/rmdkarhdwn) | Client Lead / App |
+| [우성민 (wusm1230)](https://github.com/wusm1230) | Design Lead / App |
+| [김태우 (xodn09)](https://github.com/xodn09) | Client / Web(Admin) |
+| [조성혁 (shawnatak926)](https://github.com/shawnatak926) | Server |
+| [이용인 (yongin1212)](https://github.com/yongin1212) | Server / Infra |
+| [장준혁 (JJH090501)](https://github.com/JJH090501) | MCP / Network |
 
 ---
 
 <div align="center">
 
-Part of **Pingdom**
+Maintained by **Type-Nu11**
 
 </div>
